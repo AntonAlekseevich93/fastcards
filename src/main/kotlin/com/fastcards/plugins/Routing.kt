@@ -17,3 +17,11 @@ fun Application.configureRouting() {
         }
     }
 }
+
+fun Application.configureRoutingT() {
+    routing {
+        get("/fastcard") {
+            call.respondText { "Hello world" }
+        }
+    }
+}
