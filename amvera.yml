@@ -1,11 +1,13 @@
 meta:
   environment: jvm
   toolchain:
-    name: maven
-    version: 17
+    name: gradle
+    version: 11
 
 build:
-  args: -Dserver.port=80 -Pproduction
+  args: -Dserver.port=80
+  artifacts:
+    "build/libs/*.jar": /
 
 run:
-  jarName: bag-end.jar
+  jarName: bin/bag-end.jar
