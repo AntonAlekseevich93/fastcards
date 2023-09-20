@@ -10,4 +10,5 @@ build:
     "build/libs/*.jar": /
 
 run:
+  containerPort: 8080
   jarName: bin/bag-end.jar
