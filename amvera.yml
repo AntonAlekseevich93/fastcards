@@ -4,11 +4,6 @@ meta:
     name: gradle
     version: 11
 
-build:
-  args: -Dserver.port=80
-  artifacts:
-    "build/libs/*.jar": /
-
 run:
   containerPort: 8080
   jarName: com.fastcards.fastcards.backend.jar
