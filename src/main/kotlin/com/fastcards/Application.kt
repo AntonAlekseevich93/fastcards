@@ -10,6 +10,7 @@ import io.ktor.server.netty.*
 import org.jetbrains.exposed.sql.Database
 
 fun main() {
+
     Database.connect(
         url = "jdbc:postgresql://localhost:5432/fastcards",
         driver = "org.postgresql.Driver",
@@ -19,7 +20,7 @@ fun main() {
 
 
 
-    embeddedServer(Netty, port = System.getenv("PORT").toInt()){
+    embeddedServer(Netty, port = (System.getenv("PORT")?:"80").toInt()){
         configureRouting()
         configureRoutingT()
         configureLoginRouting()
