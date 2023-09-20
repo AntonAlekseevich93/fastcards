@@ -19,13 +19,16 @@ fun main() {
 
 
 
-    embeddedServer(Netty, port = 80, host = "amvera-antonalekseevich93-run-fastcard", module = Application::module)
+    embeddedServer(Netty, port = System.getenv("PORT").toInt()){
+        configureRouting()
+        configureRoutingT()
+        configureLoginRouting()
+        configureRegistrationRouting()
+        configureSerialization()
+    }
         .start(wait = true)
 }
 
 fun Application.module() {
-    configureRouting()
-    configureLoginRouting()
-    configureRegistrationRouting()
-    configureSerialization()
+
 }
