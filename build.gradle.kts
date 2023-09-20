@@ -22,7 +22,7 @@ application {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "com.fastcards.fastcards.backend.YourMainClass"
+        attributes["Main-Class"] = "com.fastcards.ApplicationKt"
     }
 }
 
