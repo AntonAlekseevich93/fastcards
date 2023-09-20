@@ -5,5 +5,4 @@ meta:
     version: 11
 
 run:
-  containerPort: 8080
   jarName: com.fastcards.fastcards.backend.jar
