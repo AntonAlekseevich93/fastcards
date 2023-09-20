@@ -20,7 +20,7 @@ fun main() {
 
 
 
-    embeddedServer(Netty, port = (System.getenv("PORT")?:"8080").toInt()){
+    embeddedServer(CIO, port = (System.getenv("PORT")?:"8080").toInt()){
         configureRouting()
         configureRoutingT()
         configureLoginRouting()
