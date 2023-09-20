@@ -11,12 +11,12 @@ import org.jetbrains.exposed.sql.Database
 
 fun main() {
 
-    Database.connect(
-        url = "jdbc:postgresql://localhost:5432/fastcards",
-        driver = "org.postgresql.Driver",
-        password = "vvfav52p",
-        user = "postgres"
-    )
+//    Database.connect(
+//        url = "jdbc:postgresql://localhost:5432/fastcards",
+//        driver = "org.postgresql.Driver",
+//        password = "vvfav52p",
+//        user = "postgres"
+//    )
 
 
 
