@@ -6,6 +6,7 @@ import com.fastcards.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
+import io.ktor.server.netty.*
 import org.jetbrains.exposed.sql.Database
 
 fun main() {
@@ -16,7 +17,9 @@ fun main() {
         user = "postgres"
     )
 
-    embeddedServer(CIO, port = 8080, host = "0.0.0.0", module = Application::module)
+
+
+    embeddedServer(Netty, port = 80, host = "amvera-antonalekseevich93-run-fastcard", module = Application::module)
         .start(wait = true)
 }
 
