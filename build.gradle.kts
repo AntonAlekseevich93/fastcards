@@ -20,6 +20,12 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.fastcards.fastcards.backend.YourMainClass"
+    }
+}
+
 repositories {
     mavenCentral()
 }
