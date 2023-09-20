@@ -1,0 +1,1 @@
+web: ./build/install/com.fastcards.fastcards.backend/bin/com.fastcards.fastcards.backend
