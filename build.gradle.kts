@@ -35,6 +35,7 @@ tasks {
 }
 
 dependencies {
+    implementation("io.ktor:ktor-server-core:2.2.3")
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-server-cio-jvm")
