@@ -6,7 +6,6 @@ import com.fastcards.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
-import io.ktor.server.netty.*
 import org.jetbrains.exposed.sql.Database
 
 fun main() {
@@ -23,9 +22,9 @@ fun main() {
     embeddedServer(CIO, port = (System.getenv("PORT")?:"8080").toInt()){
         configureRouting()
         configureRoutingT()
-        configureLoginRouting()
-        configureRegistrationRouting()
-        configureSerialization()
+//        configureLoginRouting()
+//        configureRegistrationRouting()
+//        configureSerialization()
     }
         .start(wait = true)
 }
