@@ -30,8 +30,13 @@ application {
 //    manifest {
 //        attributes["Main-Class"] = "com.fastcards.ApplicationKt"
 //    }
-//
 //}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "io.ktor.server.netty.EngineMain"
+    }
+}
 
 //ktor {
 //    fatJar {
