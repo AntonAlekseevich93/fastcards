@@ -15,19 +15,23 @@ group = "com.fastcards"
 version = "0.0.1"
 
 application {
-    mainClass.set("com.fastcards.ApplicationKt")
-
-    val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+    mainClass.set("io.ktor.server.netty.EngineMain")
 }
 
+//application {
+//    mainClass.set("com.fastcards.ApplicationKt")
+//
+//    val isDevelopment: Boolean = project.ext.has("development")
+//    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+//}
 
-tasks.jar {
-    manifest {
-        attributes["Main-Class"] = "com.fastcards.ApplicationKt"
-    }
-
-}
+//
+//tasks.jar {
+//    manifest {
+//        attributes["Main-Class"] = "com.fastcards.ApplicationKt"
+//    }
+//
+//}
 
 //ktor {
 //    fatJar {
