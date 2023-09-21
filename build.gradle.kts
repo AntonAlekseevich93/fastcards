@@ -19,7 +19,9 @@ application {
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
-
+tasks.named("distZip") {
+    dependsOn("shadowJar")
+}
 tasks.jar {
     manifest {
         attributes["Main-Class"] = "com.fastcards.ApplicationKt"
@@ -40,10 +42,8 @@ repositories {
 //tasks {
 //    create("stage").dependsOn("installDist")
 //}
-//
-//tasks.named("distZip") {
-//    dependsOn("shadowJar")
-//}
+
+
 
 dependencies {
     implementation("io.ktor:ktor-server-core:2.2.3")
