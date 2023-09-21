@@ -8,7 +8,6 @@ plugins {
     kotlin("jvm") version "1.9.10"
     id("io.ktor.plugin") version "2.3.4"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.6.10"
-    id("com.github.johnrengelman.shadow") version "6.1.0"
 }
 
 group = "com.fastcards"
@@ -22,29 +21,18 @@ application {
 }
 
 
-application.mainClass.set("com.fastcards.ApplicationKt")
-
-tasks {
-    withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
-        archiveClassifier.set("")
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.fastcards.ApplicationKt"
     }
 
-    named("build") {
-        dependsOn("shadowJar")
-    }
 }
-//tasks.jar {
-//    manifest {
-//        attributes["Main-Class"] = "com.fastcards.ApplicationKt"
+
+//ktor {
+//    fatJar {
+//        archiveFileName.set("com.fastcards.fastcards.backend-0.0.1.jar")
 //    }
-//
 //}
-
-ktor {
-    fatJar {
-        archiveFileName.set("com.fastcards.fastcards.backend-0.0.1.jar")
-    }
-}
 
 repositories {
     mavenCentral()
