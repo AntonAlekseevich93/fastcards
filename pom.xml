@@ -1,0 +1,3 @@
+<properties>
+    <main.class>io.ktor.server.netty.EngineMain</main.class>
+</properties>
