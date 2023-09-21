@@ -24,6 +24,8 @@ tasks.jar {
     manifest {
         attributes["Main-Class"] = "com.fastcards.ApplicationKt"
     }
+
+    from(configurations["runtimeClasspath"].map { if (it.isDirectory) it else zipTree(it) })
 }
 
 repositories {
