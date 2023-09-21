@@ -27,6 +27,12 @@ tasks.jar {
 
 }
 
+ktor {
+    fatJar {
+        archiveFileName.set("com.fastcards.fastcards.backend-0.0.1.jar")
+    }
+}
+
 repositories {
     mavenCentral()
 }
