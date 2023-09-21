@@ -9,6 +9,7 @@ build:
   artifacts:
     "build/install/com.fastcards.fastcards.backend/lib/*.jar": /
 
+
 run:
   jarName: bin/com.fastcards.fastcards.backend-0.0.1.jar
   containerPort: 80
