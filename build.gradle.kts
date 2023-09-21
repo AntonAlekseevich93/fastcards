@@ -37,12 +37,13 @@ repositories {
     mavenCentral()
 }
 
-tasks {
-    create("stage").dependsOn("installDist")
-    "distZip" {
-        dependsOn("shadowJar")
-    }
-}
+//tasks {
+//    create("stage").dependsOn("installDist")
+//}
+//
+//tasks.named("distZip") {
+//    dependsOn("shadowJar")
+//}
 
 dependencies {
     implementation("io.ktor:ktor-server-core:2.2.3")
