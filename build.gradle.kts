@@ -39,6 +39,9 @@ repositories {
 
 tasks {
     create("stage").dependsOn("installDist")
+    "distZip" {
+        dependsOn("shadowJar")
+    }
 }
 
 dependencies {
